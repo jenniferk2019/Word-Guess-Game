@@ -1,6 +1,38 @@
 // // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
 var wordList = ["moon", "star", "mars", "venus", "jupiter", "mercury", "artemis", "tuxedo", "luna", "crystal", "power", "love", "sailor"];
-var wordChoice = Math.floor(Math.random() * 12);
+
+var wordChoice = wordList[Math.floor(Math.random() * wordList.length);
+
+var answerArray = [];
+for (var i = 0; i < wordList.length; i++) {
+    answerArray[i] = "_";
+}
+var remainingLetters = word.length;
+
+while (remainingLetters > 0) {
+    // Game code goes here
+    // Show the player their progress
+    // Take input from the player
+    // Update answerArray and remainingLetters for every correct guess
+}
+
+alert(answerArray.join(" "));
+
+var guess = prompt("Guess a letter");
+if (guess === null) {
+    break;
+} else if (guess.length !== 1) {
+    alert("Enter a letter.");
+} else {
+    for (var j = 0; j < word.length; j++) {
+    if (word[j] === guess) {
+     answerArray[j] = guess;
+    remainingLetters--;
+     }
+    }
+}
+
+
 // var answerArray = [];
 // for (var i = 0; i < word.length; i++) {
 //  answerArray[i] = "_";
