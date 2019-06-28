@@ -1,63 +1,43 @@
-// // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
-var wordList = ["moon", "star", "mars", "venus", "jupiter", "mercury", "artemis", "tuxedo", "luna", "crystal", "power", "love", "sailor"];
+// Array
+var words = ["moon", "star", "mars", "venus", "jupiter", "mercury", "artemis", "tuxedo", "luna", "crystal", "power", "love", "sailor"];
 
-var wordChoice = wordList[Math.floor(Math.random() * wordList.length);
+// pick random
+var word = words[Math.floor(Math.random() * words.length);
 
+// answer array
 var answerArray = [];
-for (var i = 0; i < wordList.length; i++) {
+for (var i = 0; i < wordL.length; i++) {
     answerArray[i] = "_";
 }
+
 var remainingLetters = word.length;
 
+// game loop [?]
 while (remainingLetters > 0) {
-    // Game code goes here
-    // Show the player their progress
-    // Take input from the player
-    // Update answerArray and remainingLetters for every correct guess
-}
 
-alert(answerArray.join(" "));
+    // player progress [?]
+    alert(answerArray.join(" "));
 
-var guess = prompt("Guess a letter");
-if (guess === null) {
-    break;
-} else if (guess.length !== 1) {
-    alert("Enter a letter.");
-} else {
-    for (var j = 0; j < word.length; j++) {
-    if (word[j] === guess) {
-     answerArray[j] = guess;
-    remainingLetters--;
-     }
+    // player guess
+
+    var guess = prompt("Guess a letter.");
+
+    if (guess === null) {
+        // exit game
+        break;
+    } else if (guess.length !== 1) {
+        alert("Enter a letter.");
+    } else {
+        // update game state with new guess
+        for (var j = 0; j < word.length; j++) {
+            if (word[j] === guess) {
+                answerArray[j] = guess;
+                remainingLetters--;
+            }
+        }
     }
 }
 
-
-// var answerArray = [];
-// for (var i = 0; i < word.length; i++) {
-//  answerArray[i] = "_";
-// }
-
-// var remainingLetters = word.length;
-// while (remainingLetters > 0) {
-//     // Game code goes here
-//     // Show the player their progress
-//     // Take input from the player
-//     // Update answerArray and remainingLetters for every correct guess
-//    }
-
-// // Creating variables to hold the number of wins, losses, and ties. They start at 0.
-// var wins = 0;
-// var guessesremain = 0;
-// var alreadyguessed = 0;
-
-// // Create variables that hold references to the places in the HTML where we want to display things.
-// var directionsText = document.getElementById("directions-text");
-// var winsText = document.getElementById("wins-text");
-// var userchoiceLetter = document.getElementById("userchoice-letter");
-// var guessesremainText = document.getElementById("guessesremain-text");
-// var alreadyguessedText = document.getElementById("alreadyguessed-text");
-
-
-// };
-//   </script >
+// show answer and congratulate player
+alert(answerArray.join(" "));
+alert("Good job Sailor Scout!" + word);
