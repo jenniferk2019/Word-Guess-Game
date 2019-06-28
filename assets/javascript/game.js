@@ -23,3 +23,22 @@ var setup = function()
     document.getElementById("words").innerHTML = output;
     output ="";
 }
+
+var submit = function()
+{
+    output = "";
+    userLetter=$("letter").value;
+    $("letter").value = "";
+
+    for (var x=0; x<answer.length; c++)
+    {
+        alert(letters[x]);
+        if (userLetter.toLowerCase() == letters[x])
+        {
+            display[x] = userLetter.toLowerCase();
+            win--;
+        }
+        output = output + display[x] + " ";
+    }
+    
+}
