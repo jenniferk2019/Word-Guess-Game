@@ -4,53 +4,108 @@ $(document).ready(function() {
 //Array
 var words = ["moon", "mars", "venus", "jupiter", "mercury", "artemis", "luna", "crystal"]
 
-//Pick a random word from Array
-var word = words[Math.floor(Math.random() * words.length)];
+//# of max guesses
+const maxGuess = 10
 
-//Sets answerArray to show lettersin word by using [_]s
-//a. answerArray is empty
-var answerArray = [];
-//b. answerArray loop to match length of word
-for (var i = 0; i < word.length; i++) {
-//c. sets underscore for word
-    answerArray[i] = "_";
+//Variables
+var guessedLetters = []
+var guessingWord = []
+var wordMatch
+var numGuess
+var wins = 0
+var pauseGame = false
+
+resetGame()
+
+//Keypress function
+document.onkeypress = function(event) {
+    
+// Make sure key pressed is lower case and a letter
+    if (isAlpha(event.key) && !pauseGame) {
+        checkForLetter(event.key.toLowerCase())
+    }
 }
 
-//Holding number of remainingLetters to be guessed
-var remainingLetters = word.length;
+//Game functions - check the letter and make sure it's correct
+function checkForLetter(letter) {
+    var foundLetter = false
+    var correctPic = document.createElement("pic")
+    var incorrectPic = document.createElement("pic")
+    correctPic.setAttribute("src", "assets/images/win.jpg")
+    incorrectPic.setAttribute("src", "assets/images/lose.jpg");
 
+// Search wordsArray for letter
+    for (var i=0, j= wordMatch.length; i<j; i++) {
+        if (letter === wordMatch[i]) {
+            guessingWord[i] = letter
+            foundLetter = true
+            correctPic.show()
 
-//*************** MAIN GAME *******************************//
+// If guessing word matches random word
+            if (guessingWord.join("") === wordMatch) {
 
-//Letter/word guesses left to be guessed_Main loop
-while (remainingLetters > 0) {
-//Show player progress
-document.getElementById("wordblank").innerHTML = anserArray.join("");
-//Get a guess from player
-var guess = prompt("Guess a letter!");
-//If left blank
-if (guess === null) {
-    //exit game
-    break;
-//If guess is more than one letter or no letters
-}else if (guess.length !== 1) {
-    //alert to guess single letter
-    alert("Enter a single letter");
-//If correct guess update game state with player guess
-}else{
-    for (var j = 0; j < word.length; j++ ) { 
-//If the letter guessed is in word at this point
-if (word[j] === guess) {
-//Update answerArray with letter guessed at this point
-    answerArray[j] = guess;
-//Then subject one form remaining letters
-remainingLetters--;
+//# of wins
+                wins++
+                pauseGame = true
+                updateDisplay()
+                setTimeout(resetGame,5000)
+            }
+        }
+    }
+
+    if (!foundLetter) {
+        incorrectPic.show()
+
+// Check if inccorrect guess is on the list
+        if (!guessedLetters.includes(letter)) {
+    
+// Add incorrect letter to guessed list
+            guessedLetters.push(letter)
+            
+// Lower the number of remaining guesses
+            numGuess--
+        }
+        if (numGuess === 0) {
+            
+// Show the word before starting the game again
+            guessingWord = wordToMatch.split()
+            pauseGame = true
+            setTimeout(resetGame, 5000)
+        }
+    }
+
+    updateDisplay()
+
 }
+
+// Check in keypressed is between [Alpha] a-z
+function isAlpha (ch){
+    return /^[A-Z]$/i.test(ch);
 }
+
+function resetGame() {
+    numGuess = maxGuess
+    pauseGame = false
+
+// Get new word
+    wordToMatch = possibleWords[Math.floor(Math.random() * possibleWords.length)].tolowerCase()
+
+    console.log(wordToMatch)
+
+// Reset word arrays
+    guessedLetters = []
+    guessingWord = []
+
+// Reset the guessed word
+    for (var i=0, j=wordMatch.length; i < j; i++){
+
+// Update the Display
+    updateDisplay()
 }
-//***********END OF MAIN GAME LOOP *******************/
+
+function updateDisplay () {
+    document.getElementById("totalWins").innerText = wins
+    document.getElementById("currentWord").innerText = guessingWord.join("")
+    document.getElementById("remainingGuesses").innerText = numGuess
+    document.getElementById("guessedLetters").innerText =  guessedLetters.join(" ")
 }
-//Let player know word
-alert(answerArray.join(" "));
-//Congratulate the player
-alert("Good job Sailor Scout!" + word);
