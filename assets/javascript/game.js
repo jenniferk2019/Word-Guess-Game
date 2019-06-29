@@ -28,7 +28,7 @@ function Game() {
 
 }
 
-//pic functions
+//Pic functions
 var moon = document.getElementById("moon");
 var mars = document.getElementById("mars");
 var venus = document.getElementById("venus");
@@ -70,7 +70,7 @@ function reset() {
     guessesRemaining = 10;
     blanksAndCorrect = []
     wrongGuess = []
-    Game ()
+    Game()
 }
 
 // [if/else] letter chosen matches random word
@@ -82,18 +82,54 @@ function checkLetters(letter) {
         }
     }
 
-// [if] letter false
-if (lettersOfWord) {
-    for (var i = 0; i < blanks; i++) {
-        if (randomWord[i] == letter) {
-            blanksAndCorrect[i] = letter;
+    // [if] letter false
+    if (lettersOfWord) {
+        for (var i = 0; i < blanks; i++) {
+            if (randomWord[i] == letter) {
+                blanksAndCorrect[i] = letter;
+            }
         }
     }
-}
 
-//otherwise, wrong guesses reduce remaining guesses
-else {
-    wrongGuess.push(letter);
-    guessesRemaining--;
-}
-};
+    //Otherwise, wrong guesses reduce remaining guesses
+    else {
+        wrongGuess.push(letter);
+        guessesRemaining--;
+    }
+    //Final Functions - check if the player won
+    function complete() {
+        console.log("wins:" + wins + "| losses:" + losses + "| guesses left:" + guessesRemaining)
+
+        //If player wins display image and reset new round
+        if (lettersOfWord.toString() == blanksAndCorrect.toString()) {
+            wins++;
+            img()
+            reset()
+
+            //Display wins
+            document.getElementById("winstracker").innerHTML = " " + wins;
+
+            //If LOST reset new round
+        } else if (guessesRemaining === 0) {
+            losses++;
+            reset()
+            document.getElementById("losstracker").innerHTML = " " + losses;
+        }
+
+            //Display losses on screen && guesses remaining countdown
+        document.getElementById("currentword").innerHTML = "  " + blanksAndCorrect.join(" ");
+        document.getElementById("guessesremaining").innerHTML = " " + guessesRemaining;
+    }
+    //Start game functions
+    Game()
+
+    document.onkeyup = function (event) {
+        var guesses = String.fromCharCode(event.keyCode).toLowerCase();
+        checkLetters(guesses);
+        complete();
+
+        console.log(guesses);
+
+        //Save incorrect letters on screen
+        document.getElementById("playerguesses").innerHTML = "  " + wrongGuess.join(" ");
+    };
