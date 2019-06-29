@@ -11,18 +11,15 @@
 </head>
 
 <body>
-    <div class="Heading">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">SAILOR MOON &#9790; WORD GAME</h1>
-                <p class="lead">Press any key to start game!</p>
-            </div>
-        </div>
+    <div class="container">
+        <h1 class="display-4">SAILOR MOON &#9790; WORD GAME</h1>
+        <h2 class="lead">Press any key to start game!</h2>
     </div>
+
     <div class="container">
 
         <div>
-            <h3 id="currentword"></h3>
+            <h3 id="currentword"> _ _ _ _ </h3>
         </div>
 
         <div id="scoreboard">
@@ -55,38 +52,41 @@
             </div>
         </div>
 
-        <div>
-            <img id="moon">
-            <img src="assets/images/moon.jpg" alt="..." class="img-thumbnail"></img>
+        <div id="again" onClick="reset()">Play Again!</div>
 
-            <img id="mars">
-            <img src="assets/images/mars.jpg" alt="..." class="img-thumbnail"></img>
-
-            <img id="venus">
-            <img src="assets/images/venus.jpg" alt="..." class="img-thumbnail"></img>
-
-            <img id="jupiter">
-            <img src="assets/images/jupiter.jpg" alt="..." class="img-thumbnail"></img>
-
-            <img id="mercury">
-            <img src="assets/images/mercury.jpg" alt="..." class="img-thumbnail"></img>
-
-            <img id="artemis">
-            <img src="assets/images/artemis.jpg" alt="..." class="img-thumbnail"></img>
-
-            <img id="luna">
-            <img src="assets/images/luna.jpg" alt="..." class="img-thumbnail"></img>
-
-            <img id="crystal">
-            <img src="assets/images/crystal.jpg" alt="..." class="img-thumbnail"></img>
-        </div>
-    </div>
-
-    <div class="song">
-        <audio width="400" controls>
-            <source src="assets/mp3/sailormoon.mp3" type="audio/mpeg">
-        </audio>
     </div>
 </body>
+
+<div class="song">
+    <audio width="100%" controls>
+        <source src="assets/mp3/sailormoon.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<div>
+    <img id="moon">
+    <img src="assets/images/moon.jpg" alt="..." class="img-thumbnail"></img>
+
+    <img id="mars">
+    <img src="assets/images/mars.jpg" alt="..." class="img-thumbnail"></img>
+
+    <img id="venus">
+    <img src="assets/images/venus.jpg" alt="..." class="img-thumbnail"></img>
+
+    <img id="jupiter">
+    <img src="assets/images/jupiter.jpg" alt="..." class="img-thumbnail"></img>
+
+    <img id="mercury">
+    <img src="assets/images/mercury.jpg" alt="..." class="img-thumbnail"></img>
+
+    <img id="artemis">
+    <img src="assets/images/artemis.jpg" alt="..." class="img-thumbnail"></img>
+
+    <img id="luna">
+    <img src="assets/images/luna.jpg" alt="..." class="img-thumbnail"></img>
+
+    <img id="crystal">
+    <img src="assets/images/crystal.jpg" alt="..." class="img-thumbnail"></img>
+</div>
 
 </html>
