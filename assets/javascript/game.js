@@ -1,4 +1,18 @@
-var words = ["moon", "star", "mars", "venus", "jupiter", "mercury", "artemis", "tuxedo", "luna", "crystal", "power", "love", "sailor"];
+var words = ["moon", "mars", "venus", "jupiter", "mercury", "artemis", "luna", "crystal"] 
+
+for (var i=0; i< words.length; i++) {
+    console.log(words[i]);
+}
+
+console.log(words.length)
+
+ function confirmWord ()=== true
+if (confirmWord) {
+    alert("Congrats Sailor Scout!")
+}
+else {
+    alert("So Close! Try Again!")
+}
 
 // var $ = function (id) {
 //     return document.getElementById(id);
@@ -15,8 +29,7 @@ var words = ["moon", "star", "mars", "venus", "jupiter", "mercury", "artemis", "
 
 // var setup = function()
 // {
-//     for (var i=0; i< answer.length; i++)
-//     {
+//     
 //         display[i] = "- ";
 //         output = output + display[i];
 //     }
