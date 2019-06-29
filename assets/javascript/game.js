@@ -1,18 +1,34 @@
+//Array
 var words = ["moon", "mars", "venus", "jupiter", "mercury", "artemis", "luna", "crystal"] 
 
-for (var i=0; i< words.length; i++) {
-    console.log(words[i]);
-}
+//Empty Variables 
+var randomWord = "";
+var lettersOfWord = []
+var blanks = 0;
+var blanksAndCorrect = [];
 
-console.log(words.length)
+//Counter Variables
+var wins = 0;
+var losses = 0;
+var guessesRemaining = 10;
 
- function confirmWord ()=== true
-if (confirmWord) {
-    alert("Congrats Sailor Scout!")
-}
-else {
-    alert("So Close! Try Again!")
-}
+//Starting Game Functions
+
+
+
+// for (var i=0; i< words.length; i++) {
+//     console.log(words[i]);
+// }
+
+// console.log(words.length)
+
+//  function confirmWord ()=== true
+// if (confirmWord) {
+//     alert("Congrats Sailor Scout!")
+// }
+// else {
+//     alert("So Close! Try Again!")
+// }
 
 // var $ = function (id) {
 //     return document.getElementById(id);
