@@ -1,0 +1,15 @@
+* {
+box-sizing: border-box;
+}
+
+body {
+    background: url('../images/background.jpg');
+    font-size: 18px;
+    line-height: 34px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: palevioletred;
+}
+
+.heading {
+    
+}
