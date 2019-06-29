@@ -13,61 +13,21 @@ var losses = 0;
 var guessesRemaining = 10;
 
 //Starting Game Functions
+function Game() {
+    randomWord = words[Math.floor(Math.random() * words.length)];
 
+    lettersOfWord = randomWord.split("");
 
+    blanks = lettersOfWord.length;
 
-// for (var i=0; i< words.length; i++) {
-//     console.log(words[i]);
-// }
+    for (var i = 0; i < blanks; i++) {
+        blanksAndCorrect.push("_");
+}
 
-// console.log(words.length)
+document.getElementById("currentword").innerHTML = " " + blanksAndCorrect.join(" ");
 
-//  function confirmWord ()=== true
-// if (confirmWord) {
-//     alert("Congrats Sailor Scout!")
-// }
-// else {
-//     alert("So Close! Try Again!")
-// }
-
-// var $ = function (id) {
-//     return document.getElementById(id);
-// }
-// var choice = Math.floor(Math.random() * words.length)
-// var answer = words[choice];
-// var myLength = answer.length;
-// var display=[myLength];
-// var win = myLength;
-// var letters = answer.split('');
-// var attemptsLeft= 10;
-// var output="";
-// var userLetter="";
-
-// var setup = function()
-// {
-//     
-//         display[i] = "- ";
-//         output = output + display[i];
-//     }
-//     document.getElementById("words").innerHTML = output;
-//     output ="";
-// }
-
-// var submit = function()
-// {
-//     output = "";
-//     userLetter=$("letter").value;
-//     $("letter").value = "";
-
-//     for (var x=0; x<answer.length; c++)
-//     {
-//         alert(letters[x]);
-//         if (userLetter.toLowerCase() == letters[x])
-//         {
-//             display[x] = userLetter.toLowerCase();
-//             win--;
-//         }
-//         output = output + display[x] + " ";
-//     }
-
-// }
+console.log(randomWord);
+console.log(lettersOfWord);
+console.log(blanks);
+console.log(blanksAndCorrect);
+}
