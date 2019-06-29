@@ -4,6 +4,8 @@ box-sizing: border-box;
 
 body {
     background: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-image: round; 
     font-size: 18px;
     line-height: 34px;
     font-family: cursive;
