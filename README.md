@@ -10,7 +10,7 @@ If a correct letter is guessed, the game will reveal the letter in its correct p
 
 If the user guesses the correct word, the game will continue with a new word.
 
-If the user does not guess the correct city name, then the game resets.
+If the user does not guess the correct theme name, then the game resets.
 
 Assets used:
 
