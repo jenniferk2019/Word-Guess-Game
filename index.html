@@ -15,18 +15,14 @@
 
     <div class="container">
         <form id="wordgame">
-            <input type="text" maxlength="1" minlength="1" name="letter"
-            id = "letter" placeholder="Guess a letter" />
+            <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" />
             <button id="restart" name="restart" type="button">Restart</button>
         </form>
-    
+
         <ul id="letters"></ul>
         <p id="sailor"></p>
-        <p id="output" class="output"></p>
+        <p id="output" class="output"></p> -->
 
-        <div class="start intro"> 
-            <h3 id="start-text">Press any key to start game!</h3>
-        </div>
         <h4>Current Word</h4>
         <div id="currentWord"></div>
 
@@ -40,13 +36,13 @@
         <div id="guessedLetters"></div>
 
         <div id="again" onClick="reset()">Play Again!</div>
-
     </div>
 
     <div class="song">
-            <audio controls>
-                <source src="assets/mp3/sailormoon.mp3" type="audio/mpeg">
-            </audio>
-        </div>
+        <audio controls>
+            <source src="assets/mp3/sailormoon.mp3" type="audio/mpeg">
+        </audio>
+    </div>
 </body>
+
 </html>
