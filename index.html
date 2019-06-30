@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>&#9790; Word Game</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
@@ -14,6 +14,16 @@
     </div>
 
     <div class="container">
+        <form id="wordgame">
+            <input type="text" maxlength="1" minlength="1" name="letter"
+            id = "letter" placeholder="Guess a letter" />
+            <button id="restart" name="restart" type="button">Restart</button>
+        </form>
+    
+        <ul id="letters"></ul>
+        <p id="sailor"></p>
+        <p id="output" class="output"></p>
+
         <div class="start intro"> 
             <h3 id="start-text">Press any key to start game!</h3>
         </div>

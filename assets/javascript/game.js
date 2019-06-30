@@ -13,10 +13,12 @@
     var numGuess
     var wins = 0
     var pauseGame = false
+    var dashes = [_]
+    
+    resetGame()
 
     //Keypress function
     document.onkeypress = function (event) {
-        resetGame()
 
         // Make sure key pressed is lower case and a letter
         if (isAlpha(event.key) && !pauseGame) {
@@ -102,9 +104,11 @@
 
     }
 
-        function updateDisplay() {
-            document.getElementById("totalWins").innerText = wins
-            document.getElementById("currentWord").innerText = guessingWord.join("")
-            document.getElementById("remainingGuesses").innerText = numGuess
-            document.getElementById("guessedLetters").innerText = guessedLetters.join(" ")
+        // function updateDisplay() {
+        //     document.getElementById("totalWins").HTMLElement = wins
+            currentword = document.getElementById("currentWord");
+            currentword.innerHTML = '<li class="current-word">Current word:
+            </li';
+            // document.getElementById("remainingGuesses").HTMLElement = numGuess
+            // document.getElementById("guessedLetters").HTMLElement = guessedLetters.join(" ")
         }
