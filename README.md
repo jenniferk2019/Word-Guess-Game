@@ -4,7 +4,7 @@ My game's theme is Sailor Moon and the word list is based on this anime. The pur
 
 How to Play:
 
-Press any lower case key (a-z) to start the game. The game will randomly select a Sailor Moon theme word form its internal list. It will then display a blank word using underscores to represent the letters in the word.
+Press any lower case key (a-z) to start the game. The game will randomly select a Sailor Moon theme word from its internal list. It will then display a blank word using underscores to represent the letters in the word.
 
 If a correct letter is guessed, the game will reveal the letter in its correct place. If an incorrect letter is guessed. it will then add it to a list on the incorrectly guessed letters section, and lower the remaining guess-count.
 
