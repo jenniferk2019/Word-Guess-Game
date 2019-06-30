@@ -18,7 +18,7 @@ Background image from public Google Images database
 http://images6.fanpop.com/image/photos/34800000/Sailor-Moon-and-Scouts-iceprincess7492-34833839-985-671.jpg
 
 Theme song
-file:///C:/Users/Jennifer/Desktop/Homework3/Word-Guess-Game/assets/mp3/sailormoon.mp3
+https://sailormusic.net/music/International/English/01-Sailor_Moon_Songs_from_the_TV_Series/mp3/
 
 Side notes:
 
