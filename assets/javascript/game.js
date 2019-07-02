@@ -1,5 +1,4 @@
 //GAME SETUP--------------------------->
-$(document).ready(function () {
 
     //Array
     var words = ["moon", "mars", "venus", "jupiter", "mercury", "artemis", "luna", "crystal"]
@@ -12,7 +11,7 @@ $(document).ready(function () {
     var guessingWord = []
     var wordMatch
     var numGuess
-    var wins = 0
+    var wins = 0;
     var pauseGame = false
  
     resetGame()
@@ -79,18 +78,18 @@ $(document).ready(function () {
     }
  
     // Check in keypressed is between [Alpha] a-z
-    function isAlpha(ch) {
-        return /^[A-Z]$/i.test(ch);
-    }
+   // function isAlpha(ch) {
+    //    return /^[A-Z]$/i.test(ch);
+   // }
  
     function resetGame() {
         numGuess = maxGuess
         pauseGame = false
  
         // Get new word
-        wordToMatch = possibleWords[Math.floor(Math.random() * possibleWords.length)].tolowerCase()
+        wordMatch = words[Math.floor(Math.random() * words.length)];
  
-        console.log(wordToMatch)
+        console.log(wordMatch)
  
         // Reset word arrays
         guessedLetters = []
@@ -100,13 +99,13 @@ $(document).ready(function () {
         for (var i = 0, j = wordMatch.length; i < j; i++) {
  
             // Update the Display
-            updateDisplay()
         }
  
         function updateDisplay() {
-            document.getElementById("totalWins").innerHTML = wins
+            document.getElementById("totalWins").innerText = wins;
             document.getElementById("currentWord").innerText = guessingWord.join("")
             document.getElementById("remainingGuesses").innerText = numGuess
             document.getElementById("guessedLetters").innerText = guessedLetters.join(" ")
-        }
+        } updateDisplay()
+
     };
