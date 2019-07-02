@@ -102,7 +102,7 @@
         }
  
         function updateDisplay() {
-            document.getElementById("totalWins").innerText = wins;
+            document.getElementById("totalWins").textContent = wins;
             document.getElementById("currentWord").innerText = guessingWord.join("")
             document.getElementById("remainingGuesses").innerText = numGuess
             document.getElementById("guessedLetters").innerText = guessedLetters.join(" ")
