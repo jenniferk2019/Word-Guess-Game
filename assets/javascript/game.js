@@ -16,7 +16,7 @@
  
     resetGame()
  
-    //Keypress function
+    //Keypress function - when the user hits a letter it adds to the blank word
     document.onkeypress = function (event) {
  
         // Make sure key pressed is lower case and a letter
@@ -108,4 +108,5 @@
             document.getElementById("guessedLetters").innerText = guessedLetters.join(" ")
         } updateDisplay()
 
+// end game??? or reset to play again
     };
