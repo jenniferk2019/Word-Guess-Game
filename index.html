@@ -14,27 +14,21 @@
 
     <div class="container">
         <form id="wordgame">
-            <input type="text" maxlength="1" minlength="1" name="letter" id="letter" placeholder="Guess a letter" />
-            <button id="restart" name="restart" type="button">Restart</button>
+            <input type="text" maxlength="1" id="letter" value=""/>
+            <button id="restart" name="restart" type="button">Play Again</button>
         </form>
-
-        <ul id="letters"></ul>
-        <p id="sailor"></p>
-        <p id="output" class="output"></p> -->
 
         <h4>Current Word</h4>
         <div id="currentWord"></div>
 
         <h4>Wins</h4>
-        <div id="totalWins"></div>
+        <div id="wins"></div>
 
         <h4>Guesses Remaining</h4>
-        <div id="remainingGuesses"></div>
+        <div id="guessesRemain"></div>
 
         <h4>Letters Guessed</h4>
-        <div id="guessedLetters"></div>
-
-        <div id="again" onClick="reset()">Play Again!</div>
+        <div id="lettersGuessed"></div>
     </div>
 
     <div class="song">

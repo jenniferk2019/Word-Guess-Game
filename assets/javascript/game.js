@@ -1,68 +1,45 @@
 //GAME SETUP--------------------------->
 
-    //Array
-    var words = ["moon", "mars", "venus", "jupiter", "mercury", "artemis", "luna", "crystal"]
- 
-    //# of max guesses
-    const maxGuess = 10
- 
-    // Empty variables
-    var guessedLetters = []
-    var guessingWord = []
-    var wordMatch = 0;
-    var numGuess = 0;
-    var wins = 0;
- 
-    // resetGame() ?Do I reset here??
- 
-    //Keypress function - when the user hits a letter it adds to the blank word
-    document.onkeypress = function (event) {
- 
-    //Game functions - check the letter  to see if matched in the word in the array and make sure it's correct then
-    
-    //Populate images to let user know they either guessed the word correct or got it wrong.
+// Array
+var words = ["moon", "mars", "venus", "jupiter", "mercury", "artemis", "luna", "crystal"];
 
-        correctPic.setAttribute("src", "assets/images/win.jpg")
-        incorrectPic.setAttribute("src", "assets/images/lose.jpg");
- 
-        // Using for loop to search wordsArray for letter
-        for (var i = 0, j = wordMatch.length; i < j; i++) {
-            if (letter === wordMatch[i]) {
- 
-        // If guessing word matches random word
-                if (guessingWord.join("") === wordMatch) {
- 
-        // Populate # of wins & losses
- 
-        // Check if inccorrect guess is on the list
-            if () {
+// # of wins
+var wins = 0;
 
-                else ()
+// # of guesses remaining
+var guessesRemain = 10;
 
-                else if ()
- 
-        // Add incorrect letter to guessed list
- 
-        // Lower the number of remaining guesses
- 
-        // Show the word before starting the game again
- 
-        // Get new word
-        wordMatch = words[Math.floor(Math.random() * words.length)];
- 
-        // Reset word arrays
-       
-    // Reset () ??Do I reset game here??
+// Tally letters guessed
+var lettersGuessed = [];
 
-    // Update the Display
-        }
- 
-        function updateDisplay() {
-            document.getElementById("totalWins").textContent = wins;
-            document.getElementById("currentWord").innerText = guessingWord.join("")
-            document.getElementById("remainingGuesses").innerText = numGuess
-            document.getElementById("guessedLetters").innerText = guessedLetters.join(" ")
-        } updateDisplay()
+// The currentWord
+var currentWord = "";
 
-        // Reset game here ??
-    )};
+// Spliting word into individual letters
+var currentwordLetters = [];
+
+// # of blank spaces in the word
+var blankSpaces = 0;
+
+// # of blank spaces and solved letter guesses
+var blankandconfirmSpaces = [];
+
+// Play the game********************************
+// Split the length of the word by letter to create the blank spaces
+function startGame () {
+currentWord = words[Math.floor(Math.random() * words.length)];
+currentwordLetters = words.split('');
+blankSpaces = lettersGuessed.length;
+
+// Hold number of blank spaces for the word
+// Plug in a correct letter into the blank space
+for (var i=0; i<blankSpaces; i++) {
+    blankandconfirmSpaces [i] = "_";
+}
+
+
+
+// Reset the game when user guesses all the words in the array
+// Reset the game when guessesRemain hits 0
+}
+
