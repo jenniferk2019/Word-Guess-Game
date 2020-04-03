@@ -24,4 +24,4 @@ Link: https://jenniferk2019.github.io/Word-Guess-Game/
 
 NOTE: 
 
-Certain aspects of game are unfinished.
+Certain aspects of the game are unfinished.
